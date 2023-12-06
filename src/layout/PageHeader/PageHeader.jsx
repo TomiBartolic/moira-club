@@ -11,7 +11,7 @@ export function PageHeader() {
           <img src={logo} alt="" />
         </Link>
       </div>
-      <ul className="d-flex gap-5">
+      <ul className="d-flex align-items-center justify-content-center gap-5">
         <li>
           <Link to="/play">Play</Link>
         </li>

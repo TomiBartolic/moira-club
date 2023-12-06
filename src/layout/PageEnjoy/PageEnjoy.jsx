@@ -38,7 +38,7 @@ export function PageEnjoy() {
       </div>
       <div className="row">
         {enjoyApps.content.videos.map((enjoyApp) => (
-          <div key={enjoyApp.id} className="col-lg-3">
+          <div key={enjoyApp.id} className="col-lg-3 col-md-4 col-sm-2 my-3">
             <a href={enjoyApp.src}>
               <div className="card">
                 <div className="card-body">

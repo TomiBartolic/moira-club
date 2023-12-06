@@ -39,7 +39,7 @@ export function PageFitness() {
 
       <div className="row">
         {fitnessApps.content.apps.map((fitnessApp) => (
-          <div key={fitnessApp.id} className="col-lg-3">
+          <div key={fitnessApp.id} className="col-lg-3 my-3">
             <a href={fitnessApp.src}>
               <div className="card">
                 <div className="card-body">

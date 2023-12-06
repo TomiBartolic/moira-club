@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import { Link } from 'react-router-dom'
+import game from '../assets/game1.png'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
@@ -45,8 +46,8 @@ export function PlayApps() {
       </div>
 
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={5}
+        spaceBetween={20}
         pagination={{
           clickable: true,
         }}
@@ -60,6 +61,7 @@ export function PlayApps() {
                 <a href={app.excerpt}>
                   <div className="card">
                     <div className="card-body">
+                      <img src={game} alt="game" />
                       <h3 className="card-title">{app.title}</h3>
                       <p className="card-text">{app.meta_description}</p>
                     </div>

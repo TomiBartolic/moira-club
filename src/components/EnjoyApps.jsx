@@ -46,8 +46,8 @@ export function EnjoyApps() {
       </div>
 
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={5}
+        spaceBetween={20}
         pagination={{
           clickable: true,
         }}

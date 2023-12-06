@@ -46,8 +46,8 @@ export function FitnessApps() {
       </div>
 
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={5}
+        spaceBetween={20}
         pagination={{
           clickable: true,
         }}
@@ -58,14 +58,14 @@ export function FitnessApps() {
           (fitnessApp, index) =>
             index < 8 && (
               <SwiperSlide key={fitnessApp.id} className="cards">
-                <a href={fitnessApp.src}>
+                <Link to={fitnessApp.src}>
                   <div className="card">
                     <div className="card-body">
                       <h3 className="card-title">{fitnessApp.name}</h3>
                       <p className="card-text">{fitnessApp.description}</p>
                     </div>
                   </div>
-                </a>
+                </Link>
               </SwiperSlide>
             )
         )}

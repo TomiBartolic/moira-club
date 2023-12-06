@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <PageHeader></PageHeader>
       <PageHero></PageHero>
-      <div className="container">
+      <div className="container py-5">
         <Routes>
           <Route path="/" element={<PageHome></PageHome>} />
           <Route path="/play" element={<PagePlay></PagePlay>} />
@@ -25,7 +25,7 @@ function App() {
           <Route path="/fitness" element={<PageFitness></PageFitness>} />
         </Routes>
       </div>
-      <PageFooter/>
+      <PageFooter />
     </BrowserRouter>
   )
 }
