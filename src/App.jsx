@@ -9,6 +9,7 @@ import { PageEnjoy } from './layout/PageEnjoy/PageEnjoy'
 import { PageFitness } from './layout/PageFitness/PageFitness'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { PageFooter } from './layout/PageFooter/PageFooter'
+import { PageAction } from './layout/PageActionGames/PageAction'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/play" element={<PagePlay></PagePlay>} />
           <Route path="/enjoy" element={<PageEnjoy></PageEnjoy>} />
           <Route path="/learn" element={<PageLearn></PageLearn>} />
+          <Route path="/action" element={<PageAction/>} />
           <Route path="/fitness" element={<PageFitness></PageFitness>} />
         </Routes>
       <PageFooter />

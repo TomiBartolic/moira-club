@@ -1,9 +1,9 @@
-const getApps = async () => {
+const getCategories = async (category) => {
   const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
   const ACCESS_TOKEN = 'jOlf3/Ac68d2Jwy54kH+/av6rwq3NridOhVKPtVay1k='
 
   const apiRes = await fetch(
-    `${BASE_URL}content/section/moira-exclusives-games`,
+    `${BASE_URL}content/section/${category}?`,
     {
       headers: {
         Authorization: `Bearer ${ACCESS_TOKEN}`,
@@ -16,4 +16,4 @@ const getApps = async () => {
   return apiRes.json()
 }
 
-export default getApps
+export default getCategories

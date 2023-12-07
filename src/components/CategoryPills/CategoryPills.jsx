@@ -1,139 +1,71 @@
-import './CategoryPills.css'; 
-const categories2 = [
-    {
-        id: 1,
-        name: 'Games',
-        slug: 'games'
-    },
-    {
-        id: 2,
-        name: 'Apps',
-        slug: 'apps'
-    },
-    {
-        id: 3,
-        name: 'VR',
-        slug: 'vr'
-    },
-    {
-        id: 4,
-        name: 'Games',
-        slug: 'games'
-    },
-    {
-        id: 5,
-        name: 'Apps',
-        slug: 'apps'
-    },
-    {
-        id: 6,
-        name: 'VR',
-        slug: 'vr'
-    },
-    {
-        id: 7,
-        name: 'Games',
-        slug: 'games'
-    },
-    {
-        id: 8,
-        name: 'Apps',
-        slug: 'apps'
-    },
-    {
-        id: 9,
-        name: 'VR',
-        slug: 'vr'
-    },
-    {
-        id: 10,
-        name: 'Games',
-        slug: 'games'
-    },
-    {
-        id: 11,
-        name: 'Apps',
-        slug: 'apps'
-    },
-    {
-        id: 12,
-        name: 'VR',
-        slug: 'vr'
-    },
-    {
-        id: 13,
-        name: 'Games',
-        slug: 'games'
-    },
-    {
-        id: 14,
-        name: 'Apps',
-        slug: 'apps'
-    },
-    {
-        id:  15,
-        name: 'VR',
-        slug: 'vr'
-    },
-    {
-        id: 16,
-        name: 'Games',
-        slug: 'games'
-    },
-    {
-        id: 17,
-        name: 'Apps',
-        slug: 'apps'
-    },
-    {
-        id: 18,
-        name: 'VR',
-        slug: 'vr'
-    },
-    {
-        id: 19,
-        name: 'Games',
-        slug: 'games'
-    },
-    {
-        id: 20,
-        name: 'Apps',
-        slug: 'apps'
-    },
-    {
-        id: 21,
-        name: 'VR',
-        slug: 'vr'
-    },
-    {
-        id: 22,
-        name: 'Games',
-        slug: 'games'
-    },
-    {
-        id: 23,
-        name: 'Apps',
-        slug: 'apps'
+import "./CategoryPills.css";
+import { categories } from "../../categories";
+import { Link } from "react-router-dom";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+
+const TRANSLATE_AMOUNT = 85;
+
+export function CategoryPills() {
+  const [translate, setTranslate] = useState(0);
+  const [isLeftVisible, setIsLeftVisible] = useState(false);
+  const [isRightVisible, setIsRightVisible] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const containerWidth = containerRef.current.clientWidth;
+      const buttonsWidth = categories.length * 80;
+      setIsLeftVisible(translate > 0);
+      setIsRightVisible(translate + containerWidth < buttonsWidth);
     }
-  
-  ]
+  }, [translate]);
 
-
-export function CategoryPills(categories, selectedCategory, onSelect ) {   
-    return (
-        <div className="categories" role="group" aria-label="Basic example">
-            <div className="categories-buttons">
-            {categories2.map((category) => (
-          <button
-            key={category.id}
-            type="button"
-            className={`btn btn-secondary ${category.id === selectedCategory ? 'active' : ''}`}
-            onClick={() => onSelect(category.id)}
-          >
+  return (
+    <div className="row py-2 justify-content-center overflow-auto">
+    <div ref={containerRef} className="categories" role="group" aria-label="Basic example">
+      <div  className="categories-buttons" style={{ transform: `translateX(-${translate}px)` }}>
+        {categories.map((category) => (
+          <Link key={category.id} to={category} className="btn btn-secondary">
             {category.name}
+          </Link>
+        ))}
+      </div>
+      {isLeftVisible && (
+        <div className="chevron left">
+          <button
+            className="chevron-btn"
+            onClick={() => {
+              setTranslate((translate) => {
+                const newTranslate = translate - TRANSLATE_AMOUNT;
+                return newTranslate < 0 ? 0 : newTranslate;
+              });
+            }}
+          >
+            <ChevronLeft />
           </button>
-                ))}     
-            </div>
         </div>
-    )
+      )}
+      {isRightVisible && (
+        <div className="chevron right">
+          <button
+            className="chevron-btn"
+            onClick={() => {
+              setTranslate((translate) => {
+                if (!containerRef.current) return translate;
+                const newTranslate = translate + TRANSLATE_AMOUNT;
+                const containerWidth = containerRef.current.clientWidth;
+                const buttonsWidth = categories.length * 80;
+                const maxTranslate = buttonsWidth - containerWidth;
+                return newTranslate > maxTranslate ? maxTranslate : newTranslate;
+              });
+            }}
+          >
+            <ChevronRight />
+          </button>
+        </div>
+      )}
+    </div>
+    </div>
+  );
 }

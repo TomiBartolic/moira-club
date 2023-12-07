@@ -84,3 +84,7 @@ h3.card-title {
   border-radius: 8px;
   margin-bottom: 10px;
 }
+
+button.active {
+  background-color: var(--blue) !important;
+}

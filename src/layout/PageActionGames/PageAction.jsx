@@ -6,16 +6,14 @@ import { categories } from '../../categories'
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
 const ACCESS_TOKEN = 'Vz6OvlG5d8ID3L2KYe3xsaS/2MW8xiJuwfusVeiEeX4='
 
-
-
-export function PagePlay() {
-  const [apps, setApps] = useState({ content: { articles: [] } })
+export function PageAction() {
+  const [actionGames, setActionGames] = useState({ content: { games: [] } })
 
   useEffect(() => {
-    const getApps = async () => {
+    const getActionGames = async () => {
       try {
         const response = await fetch(
-          `${BASE_URL}content/section/moira-exclusives-games`,
+          `${BASE_URL}content/section/moira-action-games`,
           {
             headers: {
               Authorization: `Bearer ${ACCESS_TOKEN}`,
@@ -27,36 +25,32 @@ export function PagePlay() {
           throw new Error('Network response was not ok')
         }
 
-        const appsData = await response.json()
-        setApps(appsData)
+        const actionGamesData = await response.json()
+        setActionGames(actionGamesData)
       } catch (error) {
         console.error('Error fetching apps:', error)
       }
     }
 
-    getApps()
-  }, [])
-
-
+    getActionGames()
+  })
   return (
-    <div className='container py-5'>
+    <div className='container'>
       <div className="section-title d-flex justify-content-between my-3">
         <h2>Play</h2>
-
-        <button className="btn btn-secondary">Games</button>
       </div>
-     
+      <div className="row py-2 justify-content-center overflow-auto">
       <CategoryPills categories={categories} />
-     
+      </div>
       <div className="row">
-        {apps.content.articles.map((app) => (
-          <div key={app.id} className="col-lg-3 my-3">
-            <a href={app.src}>
+        {actionGames.content.games.map((actionGame) => (
+          <div key={actionGame.id} className="col-lg-3 col-md-4 col-sm-2 my-3">
+            <a href={actionGame.src}>
               <div className="card">
                 <div className="card-body">
-                  <img src={game} alt="game" />
-                  <h3 className="card-title">{app.title}</h3>
-                  <p className="card-text">{app.meta_description}</p>
+                <img src={game} alt="game" />
+                  <h3 className="card-title">{actionGame.name}</h3>
+                  <p className="card-text">{actionGame.description}</p>
                 </div>
               </div>
             </a>

@@ -1,5 +1,6 @@
 .categories {
   position: relative;
+  overflow-x: hidden;
 }
 
 .categories-buttons {
@@ -8,4 +9,32 @@
   gap: 10px;
   transition: transform 0.3s ease-in-out;
   width: max-content;
+}
+
+.chevron-btn {
+  height: 100%;
+  aspect-ratio: 1;
+  width: auto;
+  border: none;
+  background: none;
+  color: #fff;
+}
+
+.chevron {
+  color: var(--white);
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 30px;
+  height: 100%;
+}
+
+.chevron.right {
+  right: 0;
+  background-image: linear-gradient(to left, var(--black) 50%, transparent);
+}
+
+.chevron.left {
+  left: 0;
+  background-image: linear-gradient(to right, var(--black) 50%, transparent);
 }
