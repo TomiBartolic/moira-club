@@ -35,7 +35,9 @@ export function PagePlay() {
   return (
     <>
       <div className="section-title d-flex justify-content-between my-3">
-        <h2>Fitness</h2>
+        <h2>Play</h2>
+
+        <button className="btn btn-secondary">Games</button>
       </div>
 
       <div className="row">
