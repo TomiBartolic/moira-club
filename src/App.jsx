@@ -3,7 +3,6 @@ import { BrowserRouter } from 'react-router-dom'
 import { Route, Routes } from 'react-router-dom'
 import { PageHeader } from './layout/PageHeader/PageHeader'
 import { PageHome } from './layout/PageHome/PageHome'
-import { PageHero } from './layout/PageHero/PageHero'
 import { PagePlay } from './layout/PagePlay/PagePlay'
 import { PageLearn } from './layout/PageLearn/PageLearn'
 import { PageEnjoy } from './layout/PageEnjoy/PageEnjoy'
@@ -15,8 +14,6 @@ function App() {
   return (
     <BrowserRouter>
       <PageHeader></PageHeader>
-      <PageHero></PageHero>
-      <div className="container py-5">
         <Routes>
           <Route path="/" element={<PageHome></PageHome>} />
           <Route path="/play" element={<PagePlay></PagePlay>} />
@@ -24,7 +21,6 @@ function App() {
           <Route path="/learn" element={<PageLearn></PageLearn>} />
           <Route path="/fitness" element={<PageFitness></PageFitness>} />
         </Routes>
-      </div>
       <PageFooter />
     </BrowserRouter>
   )

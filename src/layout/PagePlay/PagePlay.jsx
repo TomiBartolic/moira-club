@@ -1,11 +1,132 @@
 import { useEffect, useState } from 'react'
 import game from '../../assets/game1.png'
+import { CategoryPills } from '../../components/CategoryPills/CategoryPills'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'YGCfQ+gNIfU7OpEmss6490mYdSpCxkwoPOr/9hf+E4A='
+const ACCESS_TOKEN = 'Vz6OvlG5d8ID3L2KYe3xsaS/2MW8xiJuwfusVeiEeX4='
+const categories = [
+  {
+      id: 1,
+      name: 'Games',
+      slug: 'games'
+  },
+  {
+      id: 2,
+      name: 'Apps',
+      slug: 'apps'
+  },
+  {
+      id: 3,
+      name: 'VR',
+      slug: 'vr'
+  },
+  {
+      id: 4,
+      name: 'Games',
+      slug: 'games'
+  },
+  {
+      id: 5,
+      name: 'Apps',
+      slug: 'apps'
+  },
+  {
+      id: 6,
+      name: 'VR',
+      slug: 'vr'
+  },
+  {
+      id: 7,
+      name: 'Games',
+      slug: 'games'
+  },
+  {
+      id: 8,
+      name: 'Apps',
+      slug: 'apps'
+  },
+  {
+      id: 9,
+      name: 'VR',
+      slug: 'vr'
+  },
+  {
+      id: 10,
+      name: 'Games',
+      slug: 'games'
+  },
+  {
+      id: 11,
+      name: 'Apps',
+      slug: 'apps'
+  },
+  {
+      id: 12,
+      name: 'VR',
+      slug: 'vr'
+  },
+  {
+      id: 13,
+      name: 'Games',
+      slug: 'games'
+  },
+  {
+      id: 14,
+      name: 'Apps',
+      slug: 'apps'
+  },
+  {
+      id:  15,
+      name: 'VR',
+      slug: 'vr'
+  },
+  {
+      id: 16,
+      name: 'Games',
+      slug: 'games'
+  },
+  {
+      id: 17,
+      name: 'Apps',
+      slug: 'apps'
+  },
+  {
+      id: 18,
+      name: 'VR',
+      slug: 'vr'
+  },
+  {
+      id: 19,
+      name: 'Games',
+      slug: 'games'
+  },
+  {
+      id: 20,
+      name: 'Apps',
+      slug: 'apps'
+  },
+  {
+      id: 21,
+      name: 'VR',
+      slug: 'vr'
+  },
+  {
+      id: 22,
+      name: 'Games',
+      slug: 'games'
+  },
+  {
+      id: 23,
+      name: 'Apps',
+      slug: 'apps'
+  }
+
+]
+
 
 export function PagePlay() {
   const [apps, setApps] = useState({ content: { articles: [] } })
+  const [selectedCategory, setSelectedCategory] = useState(categories[0])
 
   useEffect(() => {
     const getApps = async () => {
@@ -33,13 +154,15 @@ export function PagePlay() {
     getApps()
   })
   return (
-    <>
+    <div className='container py-5'>
       <div className="section-title d-flex justify-content-between my-3">
         <h2>Play</h2>
 
         <button className="btn btn-secondary">Games</button>
       </div>
-
+      <div className="row py-2 justify-content-center overflow-auto">
+        <CategoryPills categories={categories} selectedCategory={selectedCategory} onSelect={setSelectedCategory} />
+      </div>
       <div className="row">
         {apps.content.articles.map((app) => (
           <div key={app.id} className="col-lg-3 my-3">
@@ -55,6 +178,6 @@ export function PagePlay() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   )
 }

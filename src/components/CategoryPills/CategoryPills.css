@@ -1,0 +1,11 @@
+.categories {
+  position: relative;
+}
+
+.categories-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  transition: transform 0.3s ease-in-out;
+  width: max-content;
+}

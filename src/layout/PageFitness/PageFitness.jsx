@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'YGCfQ+gNIfU7OpEmss6490mYdSpCxkwoPOr/9hf+E4A='
+const ACCESS_TOKEN = 'Vz6OvlG5d8ID3L2KYe3xsaS/2MW8xiJuwfusVeiEeX4='
 
 export function PageFitness() {
   const [fitnessApps, setFitnessApps] = useState({ content: { apps: [] } })
