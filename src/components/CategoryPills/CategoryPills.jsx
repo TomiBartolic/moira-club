@@ -26,7 +26,7 @@ export function CategoryPills() {
     <div ref={containerRef} className="categories" role="group" aria-label="Basic example">
       <div  className="categories-buttons" style={{ transform: `translateX(-${translate}px)` }}>
         {categories.map((category) => (
-          <Link key={category.id} to={category} className="btn btn-secondary">
+          <Link key={category.id} to={category.link} className="btn btn-secondary">
             {category.name}
           </Link>
         ))}

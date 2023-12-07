@@ -1,54 +1,64 @@
 export const categories = [
     {
         id: 1,
-        name: 'Games',
-        slug: 'games'
+        name: 'Action',
+        slug: 'Action',
+        link: '/play/action'
     },
     {
         id: 2,
-        name: 'Apps',
-        slug: 'apps'
+        name: 'Adventure',
+        slug: 'Adventure',
+        link: '/play/adventure'
     },
     {
         id: 3,
-        name: 'VR',
-        slug: 'vr'
+        name: 'Arcade',
+        slug: 'Arcade',
+        link: '/play/arcade'
     },
     {
         id: 4,
-        name: 'Games',
-        slug: 'games'
+        name: 'Exclusives',
+        slug: 'Exclusives',
+        link: '/play'
     },
     {
         id: 5,
-        name: 'Apps',
-        slug: 'apps'
+        name: 'Music',
+        slug: 'Music',
+        link: '/play/music'
     },
     {
         id: 6,
-        name: 'VR',
-        slug: 'vr'
+        name: 'Online',
+        slug: 'Online',
+        link: '/play/online'
     },
     {
         id: 7,
-        name: 'Games',
-        slug: 'games'
+        name: 'Racing',
+        slug: 'Racing',
+        link: '/play/racing'
     },
     {
         id: 8,
-        name: 'Apps',
-        slug: 'apps'
+        name: 'Simple',
+        slug: 'Simple',
+        link: '/play/simple'
     },
     {
         id: 9,
-        name: 'VR',
-        slug: 'vr'
+        name: 'Sport',
+        slug: 'Sport',
+        link: '/play/sport'
     },
     {
         id: 10,
-        name: 'Games',
-        slug: 'games'
+        name: 'Strategy',
+        slug: 'strategy',
+        link: '/play/strategy'
     },
-
+    
   
   ]

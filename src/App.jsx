@@ -20,7 +20,15 @@ function App() {
           <Route path="/play" element={<PagePlay></PagePlay>} />
           <Route path="/enjoy" element={<PageEnjoy></PageEnjoy>} />
           <Route path="/learn" element={<PageLearn></PageLearn>} />
-          <Route path="/action" element={<PageAction/>} />
+          <Route path="/play/action" element={<PageAction/>} />
+          <Route path="/play/adventure" element={<PageAction/>} />
+          <Route path="/play/arcade" element={<PageAction/>} />
+          <Route path="/play/music" element={<PageAction/>} />
+          <Route path="/play/online" element={<PageAction/>} />
+          <Route path="/play/racing" element={<PageAction/>} />
+          <Route path="/play/simple" element={<PageAction/>} />
+          <Route path="/play/sport" element={<PageAction/>} />
+          <Route path="/play/strategy" element={<PageAction/>} />
           <Route path="/fitness" element={<PageFitness></PageFitness>} />
         </Routes>
       <PageFooter />
