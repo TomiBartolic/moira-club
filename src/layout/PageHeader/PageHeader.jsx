@@ -9,7 +9,7 @@ import { Menu } from 'lucide-react'
 
 export function PageHeader() {
   return (
-    <nav className="nav fixed-top align-items-center justify-content-between  d-flex navigation px-3 py-2">
+    <nav className="nav fixed-top align-items-center justify-content-center  d-flex navigation px-3 py-3">
       <div className="logo">
         <Link to="/">
           <img src={logo} alt="logo" />

@@ -7,6 +7,8 @@ import 'swiper/css/pagination'
 
 import spiderman_logo from '../../assets/spiderman-logo.png'
 import avengers_logo from '../../assets/avengers-logo.png'
+import frozen_logo from '../../assets/frozen-logo.png'
+import youtube_logo from '../../assets/youtube-logo.png'
 import 'swiper/css'
 
 export function PageHero() {
@@ -15,25 +17,29 @@ export function PageHero() {
       title: 'Spider-Man',
       image: spiderman_logo,
       class: 'slide1 hero-images',
-      text: 'Lorem ipsum text',
+      text: 'The Official Movie Mobile Game - Be the hero',
+      button_text: 'Play Now',
+    },
+    {
+      title: 'Avengers',
+      image: avengers_logo,
+      class: 'slide2 hero-images',
+      text: 'Which superhero are You?',
+      button_text: 'Play Now',
     },
     {
       title: 'Frozen',
-      image: avengers_logo,
-      class: 'slide2 hero-images',
-      text: 'Lorem ipsum text',
-    },
-    {
-      title: 'Spider-Man',
-      image: spiderman_logo,
+      image: frozen_logo,
       class: 'slide3 hero-images',
-      text: 'Lorem ipsum text',
+      text: 'The Official Movie Mobile Game',
+      button_text: 'Play Now',
     },
     {
-      title: 'Spider-Man',
-      image: spiderman_logo,
+      title: 'Moira',
+      image: youtube_logo,
       class: 'slide4 hero-images',
-      text: 'Lorem ipsum text',
+      text: "Check out the Moira's Youttube Channel",
+      button_text: 'Play Now',
     },
   ]
 
@@ -58,7 +64,7 @@ export function PageHero() {
                 />
                 <h5>{slide.text}</h5>
                 <button type="button" class="btn-main">
-                  Play Now
+                  {slide.button_text}
                 </button>
               </div>
               <div class="vignette-border"></div>

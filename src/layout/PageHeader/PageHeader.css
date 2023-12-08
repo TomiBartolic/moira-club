@@ -1,5 +1,17 @@
 nav {
   background-color: var(--black);
+  position: relative;
+}
+nav ul {
+  padding-left: 0;
+}
+nav .logo {
+  position: absolute;
+  left: 20px;
+}
+nav .menu {
+  position: absolute;
+  right: 20px;
 }
 nav li img {
   width: 30px;

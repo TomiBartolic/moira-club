@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import game from '../../assets/game1.png'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'Vz6OvlG5d8ID3L2KYe3xsaS/2MW8xiJuwfusVeiEeX4='
+const ACCESS_TOKEN = 'nFoAZLbyEDWcjr3NTzMslQ9ZZ9RcnmW4Uo80M7DSiZE='
 
 export function PageLearn() {
   const [learnApps, setLearnApps] = useState({ content: { apps: [] } })
@@ -33,7 +33,7 @@ export function PageLearn() {
     getLearn()
   })
   return (
-    <div className='container py-5'>
+    <div className="container py-5">
       <div className="section-title d-flex justify-content-between my-3">
         <h2>Learn</h2>
 
@@ -44,14 +44,14 @@ export function PageLearn() {
         {learnApps.content.apps.map((learnApp) => (
           <div key={learnApp.id} className="col-lg-3 my-3">
             <a href={learnApp.src}>
-                  <div className="card">
-                    <div className="card-body">
-                    <img src={game} alt="game" />
-                      <h3 className="card-title">{learnApp.name}</h3>
-                      <p className="card-text">{learnApp.description}</p>
-                    </div>
-                  </div>
-                </a>
+              <div className="card">
+                <div className="card-body">
+                  <img src={game} alt="game" />
+                  <h3 className="card-title">{learnApp.name}</h3>
+                  <p className="card-text">{learnApp.description}</p>
+                </div>
+              </div>
+            </a>
           </div>
         ))}
       </div>
