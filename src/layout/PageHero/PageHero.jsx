@@ -15,25 +15,27 @@ export function PageHero() {
       title: 'Spider-Man',
       image: spiderman_logo,
       class: 'slide1 hero-images',
-      text: 'Lorem ipsum text',
+      text: 'The Official Movie Mobile Game - Be the hero',
+      button_text: 'Play Now',
+    },
+    {
+      title: 'Avengers',
+      image: avengers_logo,
+      class: 'slide2 hero-images',
+      text: 'Which superhero are You?',
+      button_text: 'Play Now',
     },
     {
       title: 'Frozen',
-      image: avengers_logo,
-      class: 'slide2 hero-images',
-      text: 'Lorem ipsum text',
-    },
-    {
-      title: 'Spider-Man',
-      image: spiderman_logo,
       class: 'slide3 hero-images',
-      text: 'Lorem ipsum text',
+      text: 'The Official Movie Mobile Game',
+      button_text: 'Play Now',
     },
     {
-      title: 'Spider-Man',
-      image: spiderman_logo,
+      title: 'Moira',
       class: 'slide4 hero-images',
-      text: 'Lorem ipsum text',
+      text: "Check out the Moira's Youttube Channel",
+      button_text: 'Play Now',
     },
   ]
 
@@ -50,18 +52,18 @@ export function PageHero() {
         {slide.map((slide) => {
           return (
             <SwiperSlide key={slide.id}>
-              <div class="slide-content">
+              <div className="slide-content">
                 <img
                   className="brand-logo"
                   key={slide.title}
                   src={slide.image}
                 />
                 <h5>{slide.text}</h5>
-                <button type="button" class="btn-main">
-                  Play Now
+                <button type="button" className="btn-main">
+                  {slide.button_text}
                 </button>
               </div>
-              <div class="vignette-border"></div>
+              <div className="vignette-border"></div>
               <div className={slide.class}></div>
             </SwiperSlide>
           )
