@@ -9,7 +9,7 @@
   width: 100%;
   margin-top: 20px;
   text-align: center;
-  color: #fff;
+  color: var(--white);
   position: absolute;
   bottom: 0px;
   right: 50%;
@@ -21,6 +21,7 @@
   height: 500px;
   position: relative;
 }
+
 .vignette-border {
   position: fixed;
   top: 0;
@@ -44,14 +45,14 @@
   background-size: cover;
 }
 .slide3 {
-  background-image: url('../../assets/frozen.jpg');
-  background-position: center;
+  background-image: url('../../assets/frozen-1.jpg');
+  background-position: center -60px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .slide4 {
   background-image: url('../../assets/car-game.jpg');
-  background-position: center -100px;
+  background-position: center -130px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -66,7 +67,7 @@
   align-items: left;
 }
 .brand-logo {
-  width: 300px;
+  width: 250px;
   margin-bottom: 40px;
 }
 .slide-content h5 {
@@ -86,4 +87,45 @@
   line-height: 24px;
   text-transform: uppercase;
   border: 0;
+}
+.title h1 {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .vignette-border {
+    box-shadow: 0px 0px 60px 80px var(--black) inset;
+  }
+  .slide-content {
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+  }
+  .slide-content h5 {
+    font-size: 18px !important;
+    line-height: 22px !important;
+  }
+  .title {
+    padding: 0 20px;
+  }
+  .title h1 {
+    font-size: 30px !important;
+    line-height: 34px !important;
+  }
+  .title h4 {
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .title h1 {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+  .title h4 {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
 }

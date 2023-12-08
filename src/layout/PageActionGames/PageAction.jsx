@@ -4,7 +4,7 @@ import { CategoryPills } from '../../components/CategoryPills/CategoryPills'
 import { categories } from '../../categories'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'Vz6OvlG5d8ID3L2KYe3xsaS/2MW8xiJuwfusVeiEeX4='
+const ACCESS_TOKEN = 'nFoAZLbyEDWcjr3NTzMslQ9ZZ9RcnmW4Uo80M7DSiZE='
 
 export function PageAction() {
   const [actionGames, setActionGames] = useState({ content: { games: [] } })
@@ -35,12 +35,12 @@ export function PageAction() {
     getActionGames()
   })
   return (
-    <div className='container'>
+    <div className="container">
       <div className="section-title d-flex justify-content-between my-3">
         <h2>Play</h2>
       </div>
       <div className="row py-2 justify-content-center overflow-auto">
-      <CategoryPills categories={categories} />
+        <CategoryPills categories={categories} />
       </div>
       <div className="row">
         {actionGames.content.games.map((actionGame) => (
@@ -48,7 +48,7 @@ export function PageAction() {
             <a href={actionGame.src}>
               <div className="card">
                 <div className="card-body">
-                <img src={game} alt="game" />
+                  <img src={game} alt="game" />
                   <h3 className="card-title">{actionGame.name}</h3>
                   <p className="card-text">{actionGame.description}</p>
                 </div>
