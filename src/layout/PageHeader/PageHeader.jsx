@@ -1,28 +1,44 @@
-import logo from '../../assets/logo-white.png'
+import logo from '../../assets/moira-logo-white.svg'
+import icon_game from '../../assets/icon-game.svg'
+import icon_learn from '../../assets/icon-learn.svg'
+import icon_enjoy from '../../assets/icon-enjoy.svg'
+import icon_train from '../../assets/icon-train.svg'
 import './PageHeader.css'
 import { Link } from 'react-router-dom'
 import { Menu } from 'lucide-react'
 
 export function PageHeader() {
   return (
-    <nav className="nav container align-items-center justify-content-between  d-flex navigation py-2">
+    <nav className="nav fixed-top align-items-center justify-content-between  d-flex navigation px-3 py-2">
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="" />
+          <img src={logo} alt="logo" />
         </Link>
       </div>
-      <ul className="d-flex align-items-center justify-content-center gap-5">
+      <ul className="d-flex align-items-center justify-content-center gap-4">
         <li>
-          <Link to="/play">Play</Link>
+          <Link to="/play">
+            <img src={icon_game} alt="icon game" />
+            Play
+          </Link>
         </li>
         <li>
-          <Link to="/learn">Learn</Link>
+          <Link to="/learn">
+            <img src={icon_learn} alt="icon learn" />
+            Learn
+          </Link>
         </li>
         <li>
-          <Link to="/enjoy">Enjoy</Link>
+          <Link to="/enjoy">
+            <img src={icon_enjoy} alt="icon enjoy" />
+            Enjoy
+          </Link>
         </li>
         <li>
-          <Link to="/fitness">Fitness</Link>
+          <Link to="/fitness">
+            <img src={icon_train} alt="icon train" />
+            Fitness
+          </Link>
         </li>
       </ul>
       <div className="menu">
