@@ -26,107 +26,150 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   overflow-x: hidden;
   background-color: var(--black) !important;
   color: var(--white) !important;
 }
 
 h1 {
-  font-size: 40px;
-  line-height: 44px;
+  font-size: 40px !important;
+  line-height: 44px !important;
   position: relative;
-  font-weight: 900;
+  font-weight: 900 !important;
 }
 
 h2 {
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 36px !important;
+  line-height: 40px !important;
   position: relative;
-  font-weight: 900;
+  font-weight: 900 !important;
 }
 
 h3 {
-  font-size: 30px;
-  line-height: 34px;
+  font-size: 30px !important;
+  line-height: 34px !important;
   position: relative;
-  font-weight: 900;
+  font-weight: 900 !important;
 }
 h3 span {
-  font-size: 30px;
-  line-height: 34px;
+  font-size: 30px !important;
+  line-height: 34px !important;
   position: relative;
-  font-weight: 900;
+  font-weight: 900 !important;
   text-transform: uppercase;
 }
 
 h4 {
-  font-size: 26px;
-  line-height: 20px;
+  font-size: 26px !important;
+  line-height: 20px !important;
   position: relative;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 h5 {
-  font-size: 24px;
-  line-height: 20px;
+  font-size: 24px !important;
+  line-height: 20px !important;
   position: relative;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 h6 {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 20px !important;
+  line-height: 24px !important;
   position: relative;
-  font-weight: 500;
+  font-weight: 500 !important;
   text-transform: uppercase;
 }
 p {
+  font-size: 16px !important;
+  line-height: 18px !important;
+  position: relative;
+  font-weight: 400 !important;
+}
+.small-strong {
+  font-size: 14px !important;
+  line-height: 16px !important;
+  position: relative;
+  font-weight: 600 !important;
+}
+.small {
+  font-size: 14px !important;
+  line-height: 16px !important;
+  position: relative;
+  font-weight: 400 !important;
+}
+.mini {
+  font-size: 12px !important;
+  line-height: 14px !important;
+  position: relative;
+  font-weight: 400 !important;
+}
+.miqro {
+  font-size: 10px !important;
+  line-height: 12px !important;
+  position: relative;
+  font-weight: 400 !important;
+  margin-bottom: 0px;
+}
+a {
   font-size: 16px;
   line-height: 18px;
   position: relative;
   font-weight: 400;
+  color: var(--white);
 }
-.small-strong {
-  font-size: 14px;
-  line-height: 16px;
-  position: relative;
-  font-weight: 600;
+a:hover {
+  color: var(--magenta);
 }
-.small {
-  font-size: 14px;
-  line-height: 16px;
-  position: relative;
-  font-weight: 400;
+.text-justify {
+  text-align: justify;
 }
-.mini {
+.section-title img {
+  width: 40px;
+  margin-right: 10px;
+}
+.section-title a {
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--white);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.section-title a.small-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  height: 30px;
+  padding: 0 10px;
+  background: var(--Dark-Gray, #232323);
+  color: var(--White, #fff);
+  text-align: center;
   font-size: 12px;
-  line-height: 14px;
-  position: relative;
-  font-weight: 400;
-}
-.miqro {
-  font-size: 10px;
   line-height: 12px;
-  position: relative;
   font-weight: 400;
+  text-transform: capitalize;
 }
-
 .card {
   background: var(--darkGrey) !important;
   border-radius: 15px !important;
 }
-
 p.card-text {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   color: var(--gray);
+  font-size: 12px !important;
+  line-height: 14px !important;
+  margin-bottom: 10px;
 }
-
-h3.card-title {
-  font-size: 1.4rem;
-  color: var(--white);
+p.card-title {
+  color: var(--white) !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  font-weight: 600 !important;
 }
-
 .card img {
   width: 100%;
   height: 100%;
@@ -134,7 +177,37 @@ h3.card-title {
   border-radius: 8px;
   margin-bottom: 10px;
 }
-
+.card-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.tag-name,
+.size-file,
+.review {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+.tag-name img {
+  width: 10px;
+  margin: 0;
+}
+.size-file img {
+  width: 10px;
+  margin: 0;
+}
+.review img {
+  width: 10px;
+  margin: 0;
+}
+.swiper-pagination {
+  display: none;
+}
 button.active {
   background-color: var(--blue) !important;
 }

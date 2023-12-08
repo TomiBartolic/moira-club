@@ -7,6 +7,8 @@ import 'swiper/css/pagination'
 
 import spiderman_logo from '../../assets/spiderman-logo.png'
 import avengers_logo from '../../assets/avengers-logo.png'
+import frozen_logo from '../../assets/frozen-logo.png'
+import youtube_logo from '../../assets/youtube-logo.png'
 import 'swiper/css'
 
 export function PageHero() {
@@ -27,12 +29,14 @@ export function PageHero() {
     },
     {
       title: 'Frozen',
+      image: frozen_logo,
       class: 'slide3 hero-images',
       text: 'The Official Movie Mobile Game',
       button_text: 'Play Now',
     },
     {
       title: 'Moira',
+      image: youtube_logo,
       class: 'slide4 hero-images',
       text: "Check out the Moira's Youttube Channel",
       button_text: 'Play Now',

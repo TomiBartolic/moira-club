@@ -2,4 +2,41 @@ footer {
   background-image: url(../../assets/footer-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+}
+footer p {
+  color: var(--gray);
+  margin-bottom: 5px;
+}
+footer h6 {
+  text-transform: lowercase;
+  margin: 0;
+  margin-bottom: 40px;
+}
+.footer-logo {
+  margin-bottom: 50px;
+}
+footer a {
+  font-size: 16px;
+  line-height: 18px;
+  position: relative;
+  font-weight: 400;
+  color: var(--white);
+  text-decoration: underline;
+}
+footer a:hover {
+  color: var(--magenta);
+}
+footer ul.social li {
+  display: inline;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+  footer ul {
+    padding-left: 0;
+  }
+  .disclaimer {
+    margin-bottom: 50px;
+  }
 }

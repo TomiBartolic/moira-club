@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import { Link } from 'react-router-dom'
+import icon_game from '../assets/icon-game.svg'
 import game from '../assets/game1.png'
+import star from '../assets/star-icon.svg'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'Vz6OvlG5d8ID3L2KYe3xsaS/2MW8xiJuwfusVeiEeX4='
+const ACCESS_TOKEN = 'nFoAZLbyEDWcjr3NTzMslQ9ZZ9RcnmW4Uo80M7DSiZE='
 
 export function PlayApps() {
   const [apps, setApps] = useState({ content: { articles: [] } })
@@ -39,8 +41,11 @@ export function PlayApps() {
   return (
     <>
       <div className="section-title d-flex justify-content-between my-3">
-        <h2>Play</h2>
-        <Link to="/play" className="btn btn-light">
+        <Link to="/play">
+          <img src={icon_game} alt="icon game" />
+          Play
+        </Link>
+        <Link to="/play" className="small-btn">
           See All
         </Link>
       </div>
@@ -62,8 +67,22 @@ export function PlayApps() {
                   <div className="card">
                     <div className="card-body">
                       <img src={game} alt="game" />
-                      <h3 className="card-title">{app.title}</h3>
+                      <p className="card-title">{app.title}</p>
                       <p className="card-text">{app.meta_description}</p>
+                      <div className="card-info">
+                        <div className="tag-name">
+                          <img src={star} alt="star review" />
+                          <p class="miqro">4.2</p>
+                        </div>
+                        <div className="size-file">
+                          <img src={star} alt="star review" />
+                          <p class="miqro">4.2</p>
+                        </div>
+                        <div className="review">
+                          <img src={star} alt="star review" />
+                          <p class="miqro">4.2</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </a>

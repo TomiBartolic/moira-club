@@ -9,13 +9,13 @@ import { Menu } from 'lucide-react'
 
 export function PageHeader() {
   return (
-    <nav className="nav fixed-top align-items-center justify-content-center  d-flex navigation px-3 py-3">
+    <nav className="nav fixed-top align-items-center justify-content-center  d-flex navigation">
       <div className="logo">
         <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
       </div>
-      <ul className="d-flex align-items-center justify-content-center gap-4">
+      <ul className="main-nav">
         <li>
           <Link to="/play">
             <img src={icon_game} alt="icon game" />

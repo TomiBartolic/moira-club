@@ -1,9 +1,16 @@
 nav {
   background-color: var(--black);
   position: relative;
+  height: 60px;
 }
 nav ul {
   padding-left: 0;
+}
+nav ul.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
 nav .logo {
   position: absolute;
@@ -28,4 +35,10 @@ nav li a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 991px) {
+  nav ul.main-nav {
+    display: none !important;
+  }
 }
