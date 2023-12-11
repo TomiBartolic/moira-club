@@ -1,67 +1,64 @@
-import { useEffect, useState } from 'react';
-import gameImage from '../../assets/game1.png';
-import { CategoryPills } from '../../components/CategoryPills/CategoryPills';
-import { categories } from '../../categories';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+import gameImage from '../../assets/game1.png'
+import { CategoryPills } from '../../components/CategoryPills/CategoryPills'
+import { categories } from '../../categories'
+import { useParams } from 'react-router-dom'
 
-const BASE_URL = 'https://cms-nocache-api.d1b.pw/';
-const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ=';
+const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
+const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ='
 
 export function PagePlay() {
-  const [activeCategory, setActiveCategory] = useState(null);
-  const [games, setGames] = useState({ content: { games: [] } });
-  const [articles, setArticles] = useState({ content: { articles: [] } });
-  const { id } = useParams();
+  const [activeCategory, setActiveCategory] = useState(null)
+  const [games, setGames] = useState({ content: { games: [] } })
+  const [articles, setArticles] = useState({ content: { articles: [] } })
+  const { id } = useParams()
 
   const getSection = async (section) => {
     try {
-      const response = await fetch(
-        `${BASE_URL}content/section/${section}`,
-        {
-          headers: {
-            Authorization: `Bearer ${ACCESS_TOKEN}`,
-          },
-        }
-      );
+      const response = await fetch(`${BASE_URL}content/section/${section}`, {
+        headers: {
+          Authorization: `Bearer ${ACCESS_TOKEN}`,
+        },
+      })
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Network response was not ok')
       }
 
-      const sectionData = await response.json();
-      return sectionData;
+      const sectionData = await response.json()
+      return sectionData
     } catch (error) {
-      console.error('Error fetching section:', error);
-      return { content: { games: [] } }; // You might want to change this default value
+      console.error('Error fetching section:', error)
+      return { content: { games: [] } } // You might want to change this default value
     }
-  };
+  }
 
   useEffect(() => {
     const getGameData = async () => {
-      const data = await getSection(`moira-${activeCategory}-games`);
-      setGames(data);
-    };
+      const data = await getSection(`moira-${activeCategory}-games`)
+      setGames(data)
+    }
 
     const getArticlesData = async () => {
-      const data = await getSection(`moira-${activeCategory}-games`);
-      setArticles(data);
-    };
+      const data = await getSection(`moira-${activeCategory}-games`)
+      setArticles(data)
+    }
 
     if (activeCategory) {
-      getGameData();
-      getArticlesData();
+      getGameData()
+      getArticlesData()
     }
-  }, [activeCategory]);
+  }, [activeCategory])
 
   const handleCategoryClick = (category) => {
-    setActiveCategory(category.slug);
-  };
+    setActiveCategory(category.slug)
+  }
 
   return (
-    <div className='container'>
+    <div className="container">
       <div className="section-title d-flex justify-content-between">
         <h2>{id}</h2>
-        <button className='btn btn-primary'>Games</button>
+        <button className="btn btn-primary">Games</button>
       </div>
       <div className="row py-2 justify-content-center overflow-auto">
         <CategoryPills
@@ -99,5 +96,5 @@ export function PagePlay() {
         ))}
       </div>
     </div>
-  );
+  )
 }

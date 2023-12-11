@@ -1,50 +1,46 @@
 import { useEffect, useState } from 'react'
 import game from '../../assets/game1.png'
-import { CategoryPills } from '../../components/CategoryPills/CategoryPills';
-import { categoriesLearn } from '../../categories';
+import { CategoryPills } from '../../components/CategoryPills/CategoryPills'
+import { categoriesLearn } from '../../categories'
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
 const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ='
 
 export function PageLearn() {
   const [games, setGames] = useState({ content: { apps: [] } })
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [activeCategory, setActiveCategory] = useState(null)
 
- 
   const getSection = async (section) => {
     try {
-      const response = await fetch(
-        `${BASE_URL}content/section/${section}`,
-        {
-          headers: {
-            Authorization: `Bearer ${ACCESS_TOKEN}`,
-          },
-        }
-      );
+      const response = await fetch(`${BASE_URL}content/section/${section}`, {
+        headers: {
+          Authorization: `Bearer ${ACCESS_TOKEN}`,
+        },
+      })
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Network response was not ok')
       }
 
-      const sectionData = await response.json();
-      return sectionData;
+      const sectionData = await response.json()
+      return sectionData
     } catch (error) {
-      console.error('Error fetching section:', error);
-      return { content: { apps: [] } }; // You might want to change this default value
+      console.error('Error fetching section:', error)
+      return { content: { apps: [] } } // You might want to change this default value
     }
-  };
+  }
   useEffect(() => {
     const getGameData = async () => {
-      const data = await getSection(`moira-${activeCategory}-apps`);
-      setGames(data);
-    };
+      const data = await getSection(`moira-${activeCategory}-apps`)
+      setGames(data)
+    }
 
     if (activeCategory) {
-      getGameData();
+      getGameData()
     }
-  }, [activeCategory]);
+  }, [activeCategory])
   const handleCategoryClick = (category) => {
-    setActiveCategory(category.slug);
-  };
+    setActiveCategory(category.slug)
+  }
   return (
     <div className="container py-5">
       <div className="section-title d-flex justify-content-between my-3">
@@ -53,10 +49,10 @@ export function PageLearn() {
         <button className="btn btn-secondary">Games</button>
       </div>
       <CategoryPills
-          categories={categoriesLearn}
-          activeCategory={activeCategory}
-          onClick={handleCategoryClick}
-        />
+        categories={categoriesLearn}
+        activeCategory={activeCategory}
+        onClick={handleCategoryClick}
+      />
       <div className="row">
         {games.content.apps.map((learnApp) => (
           <div key={learnApp.id} className="col-lg-3 my-3">

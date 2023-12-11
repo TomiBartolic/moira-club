@@ -8,10 +8,10 @@ export function PageHome() {
     <>
       <PageHero />
       <div className="container py-5">
-      <PlayApps />
-      <LearnApps />
-      <EnjoyApps />
-      <FitnessApps />
+        <PlayApps />
+        <LearnApps />
+        <EnjoyApps />
+        <FitnessApps />
       </div>
     </>
   )

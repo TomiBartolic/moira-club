@@ -29,13 +29,13 @@ export function PageHeader() {
           </Link>
         </li>
         <li>
-          <Link to="/enjoy">
+          <Link to="/enjoy/gaming">
             <img src={icon_enjoy} alt="icon enjoy" />
             Enjoy
           </Link>
         </li>
         <li>
-          <Link to="/fitness">
+          <Link to="/fitness/beauty">
             <img src={icon_train} alt="icon train" />
             Fitness
           </Link>

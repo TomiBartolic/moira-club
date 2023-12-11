@@ -10,19 +10,17 @@ import { PageFitness } from './layout/PageFitness/PageFitness'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { PageFooter } from './layout/PageFooter/PageFooter'
 
-
-
 function App() {
   return (
     <BrowserRouter>
       <PageHeader></PageHeader>
-        <Routes>
-          <Route path="/" element={<PageHome></PageHome>} />
-          <Route path="/play/:id" element={<PagePlay></PagePlay>} />
-          <Route path="/enjoy" element={<PageEnjoy></PageEnjoy>} />
-          <Route path="/learn/:id" element={<PageLearn></PageLearn>} />
-          <Route path="/fitness" element={<PageFitness></PageFitness>} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<PageHome></PageHome>} />
+        <Route path="/play/:id" element={<PagePlay></PagePlay>} />
+        <Route path="/enjoy/:id" element={<PageEnjoy></PageEnjoy>} />
+        <Route path="/learn/:id" element={<PageLearn></PageLearn>} />
+        <Route path="/fitness/:id" element={<PageFitness></PageFitness>} />
+      </Routes>
       <PageFooter />
     </BrowserRouter>
   )
