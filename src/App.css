@@ -208,6 +208,11 @@ h3.card-title {
 .swiper-pagination {
   display: none;
 }
-button.active {
+.btn-secondary.active {
   background-color: var(--blue) !important;
+  border: none !important;
+}
+.section-title {
+  padding-top: 100px;
+  padding-bottom: 30px;
 }

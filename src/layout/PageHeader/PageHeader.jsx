@@ -17,7 +17,7 @@ export function PageHeader() {
       </div>
       <ul className="main-nav">
         <li>
-          <Link to="/play">
+          <Link to="/play/action">
             <img src={icon_game} alt="icon game" />
             Play
           </Link>

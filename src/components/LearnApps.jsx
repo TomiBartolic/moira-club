@@ -40,7 +40,7 @@ export function LearnApps() {
     <>
       <div className="section-title d-flex justify-content-between my-3">
         <h2>Learn</h2>
-        <Link to="/play" className="btn btn-light">
+        <Link to="/learn" className="btn btn-light">
           See All
         </Link>
       </div>

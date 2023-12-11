@@ -21,7 +21,7 @@ export const categories = [
         id: 4,
         name: 'Exclusives',
         slug: 'Exclusives',
-        link: '/play'
+        link: '/play/exclusives'
     },
     {
         id: 5,
