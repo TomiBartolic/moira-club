@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<PageHome></PageHome>} />
           <Route path="/play/:id" element={<PagePlay></PagePlay>} />
           <Route path="/enjoy" element={<PageEnjoy></PageEnjoy>} />
-          <Route path="/learn" element={<PageLearn></PageLearn>} />
+          <Route path="/learn/:id" element={<PageLearn></PageLearn>} />
           <Route path="/fitness" element={<PageFitness></PageFitness>} />
         </Routes>
       <PageFooter />

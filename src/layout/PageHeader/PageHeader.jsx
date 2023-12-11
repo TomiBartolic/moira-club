@@ -23,7 +23,7 @@ export function PageHeader() {
           </Link>
         </li>
         <li>
-          <Link to="/learn">
+          <Link to="/learn/education">
             <img src={icon_learn} alt="icon learn" />
             Learn
           </Link>
