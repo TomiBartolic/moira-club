@@ -9,7 +9,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'nFoAZLbyEDWcjr3NTzMslQ9ZZ9RcnmW4Uo80M7DSiZE='
+const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ='
 
 export function PlayApps() {
   const [apps, setApps] = useState({ content: { articles: [] } })
@@ -45,7 +45,7 @@ export function PlayApps() {
           <img src={icon_game} alt="icon game" />
           Play
         </Link>
-        <Link to="/play" className="small-btn">
+        <Link to="/play/action" className="small-btn">
           See All
         </Link>
       </div>
@@ -65,22 +65,29 @@ export function PlayApps() {
               <SwiperSlide key={app.id} className="cards">
                 <a href={app.excerpt}>
                   <div className="card">
-                    <div className="card-body">
+                    <div className="card-header">
                       <img src={game} alt="game" />
+                      <div className="border-btn">
+                        <Link to="/play" className="card-btn blue-btn">
+                          See All
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="card-body">
                       <p className="card-title">{app.title}</p>
                       <p className="card-text">{app.meta_description}</p>
                       <div className="card-info">
                         <div className="tag-name">
                           <img src={star} alt="star review" />
-                          <p class="miqro">4.2</p>
+                          <p className="miqro">4.2</p>
                         </div>
                         <div className="size-file">
                           <img src={star} alt="star review" />
-                          <p class="miqro">4.2</p>
+                          <p className="miqro">4.2</p>
                         </div>
                         <div className="review">
                           <img src={star} alt="star review" />
-                          <p class="miqro">4.2</p>
+                          <p className="miqro">4.2</p>
                         </div>
                       </div>
                     </div>

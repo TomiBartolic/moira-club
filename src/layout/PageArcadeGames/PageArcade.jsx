@@ -4,7 +4,7 @@ import { CategoryPills } from '../../components/CategoryPills/CategoryPills'
 import { categories } from '../../categories'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'nFoAZLbyEDWcjr3NTzMslQ9ZZ9RcnmW4Uo80M7DSiZE='
+const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ='
 
 export function PageArcade() {
   const [arcadeGames, setArcadeGames] = useState({ content: { games: [] } })
@@ -35,12 +35,12 @@ export function PageArcade() {
     getArcade()
   })
   return (
-    <div className='container'>
+    <div className="container">
       <div className="section-title d-flex justify-content-between my-3">
         <h2>Play</h2>
       </div>
       <div className="row py-2 justify-content-center overflow-auto">
-      <CategoryPills categories={categories} />
+        <CategoryPills categories={categories} />
       </div>
       <div className="row">
         {arcadeGames.content.games.map((arcadeGame) => (
@@ -48,7 +48,7 @@ export function PageArcade() {
             <a href={arcadeGame.src}>
               <div className="card">
                 <div className="card-body">
-                <img src={game} alt="game" />
+                  <img src={game} alt="game" />
                   <h3 className="card-title">{arcadeGame.name}</h3>
                   <p className="card-text">{arcadeGame.description}</p>
                 </div>

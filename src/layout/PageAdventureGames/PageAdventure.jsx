@@ -4,10 +4,12 @@ import { CategoryPills } from '../../components/CategoryPills/CategoryPills'
 import { categories } from '../../categories'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'nFoAZLbyEDWcjr3NTzMslQ9ZZ9RcnmW4Uo80M7DSiZE='
+const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ='
 
 export function PageAdventure() {
-  const [adventureGames, setAdventureGames] = useState({ content: { games: [] } })
+  const [adventureGames, setAdventureGames] = useState({
+    content: { games: [] },
+  })
 
   useEffect(() => {
     const getAdventure = async () => {
@@ -33,22 +35,25 @@ export function PageAdventure() {
     }
 
     getAdventure()
-  },[])
+  }, [])
   return (
-    <div className='container'>
+    <div className="container">
       <div className="section-title d-flex justify-content-between my-3">
         <h2>Play</h2>
       </div>
       <div className="row py-2 justify-content-center overflow-auto">
-      <CategoryPills categories={categories} />
+        <CategoryPills categories={categories} />
       </div>
       <div className="row">
         {adventureGames.content.games.map((adventureGame) => (
-          <div key={adventureGame.id} className="col-lg-3 col-md-4 col-sm-2 my-3">
+          <div
+            key={adventureGame.id}
+            className="col-lg-3 col-md-4 col-sm-2 my-3"
+          >
             <a href={adventureGame.src}>
               <div className="card">
                 <div className="card-body">
-                <img src={game} alt="game" />
+                  <img src={game} alt="game" />
                   <h3 className="card-title">{adventureGame.name}</h3>
                   <p className="card-text">{adventureGame.description}</p>
                 </div>
