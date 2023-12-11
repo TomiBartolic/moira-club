@@ -9,7 +9,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'nFoAZLbyEDWcjr3NTzMslQ9ZZ9RcnmW4Uo80M7DSiZE='
+const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ='
 
 export function PlayApps() {
   const [apps, setApps] = useState({ content: { articles: [] } })
@@ -67,20 +67,20 @@ export function PlayApps() {
                   <div className="card">
                     <div className="card-body">
                       <img src={game} alt="game" />
-                      <p className="card-title">{app.title}</p>
+                      <h3 className="card-title">{app.title}</h3>
                       <p className="card-text">{app.meta_description}</p>
                       <div className="card-info">
                         <div className="tag-name">
                           <img src={star} alt="star review" />
-                          <p class="miqro">4.2</p>
+                          <p className="miqro">4.2</p>
                         </div>
                         <div className="size-file">
                           <img src={star} alt="star review" />
-                          <p class="miqro">4.2</p>
+                          <p className="miqro">4.2</p>
                         </div>
                         <div className="review">
                           <img src={star} alt="star review" />
-                          <p class="miqro">4.2</p>
+                          <p className="miqro">4.2</p>
                         </div>
                       </div>
                     </div>

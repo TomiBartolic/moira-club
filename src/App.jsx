@@ -22,7 +22,7 @@ function App() {
       <PageHeader></PageHeader>
         <Routes>
           <Route path="/" element={<PageHome></PageHome>} />
-          <Route path="/play" element={<PagePlay></PagePlay>} />
+          <Route path="/play" element={<PagePlay/>} />
           <Route path="/enjoy" element={<PageEnjoy></PageEnjoy>} />
           <Route path="/learn" element={<PageLearn></PageLearn>} />
           <Route path="/play/action" element={<PageAction/>} />

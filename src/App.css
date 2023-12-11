@@ -164,7 +164,7 @@ p.card-text {
   line-height: 14px !important;
   margin-bottom: 10px;
 }
-p.card-title {
+h3.card-title {
   color: var(--white) !important;
   font-size: 14px !important;
   line-height: 16px !important;

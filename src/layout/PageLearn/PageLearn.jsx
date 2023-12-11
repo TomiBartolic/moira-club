@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import game from '../../assets/game1.png'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'nFoAZLbyEDWcjr3NTzMslQ9ZZ9RcnmW4Uo80M7DSiZE='
+const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ='
 
 export function PageLearn() {
   const [learnApps, setLearnApps] = useState({ content: { apps: [] } })
