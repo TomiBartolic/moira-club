@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import { Link } from 'react-router-dom'
+import icon_train from '../assets/icon-train.svg'
+import game from '../assets/game1.png'
+import star from '../assets/star-icon.svg'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ='
+const ACCESS_TOKEN = 'blou1S2KSFYz9yANhzHmYbmbrq2NDidI4cKeucZoIEg='
 
 export function FitnessApps() {
   const [fitnessApps, setFitnessApps] = useState({ content: { apps: [] } })
@@ -39,8 +42,11 @@ export function FitnessApps() {
   return (
     <>
       <div className="section-title d-flex justify-content-between my-3">
-        <h2>Fitness</h2>
-        <Link to="/fitness" className="btn btn-light">
+        <Link to="/fitness">
+          <img src={icon_train} alt="icon fitness" />
+          Play
+        </Link>
+        <Link to="/fitness" className="small-btn">
           See All
         </Link>
       </div>
@@ -60,9 +66,31 @@ export function FitnessApps() {
               <SwiperSlide key={fitnessApp.id} className="cards">
                 <Link to={fitnessApp.src}>
                   <div className="card">
+                    <div className="card-header">
+                      <img src={game} alt="game" />
+                      <div className="border-btn">
+                        <Link to="/fitness" className="card-btn green-btn">
+                          See All
+                        </Link>
+                      </div>
+                    </div>
                     <div className="card-body">
                       <h3 className="card-title">{fitnessApp.name}</h3>
                       <p className="card-text">{fitnessApp.description}</p>
+                      <div className="card-info">
+                        <div className="tag-name">
+                          <img src={star} alt="star review" />
+                          <p className="miqro">4.2</p>
+                        </div>
+                        <div className="size-file">
+                          <img src={star} alt="star review" />
+                          <p className="miqro">4.2</p>
+                        </div>
+                        <div className="review">
+                          <img src={star} alt="star review" />
+                          <p className="miqro">4.2</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Link>

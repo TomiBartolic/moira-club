@@ -9,7 +9,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ='
+const ACCESS_TOKEN = 'blou1S2KSFYz9yANhzHmYbmbrq2NDidI4cKeucZoIEg='
 
 export function PlayApps() {
   const [apps, setApps] = useState({ content: { articles: [] } })
@@ -65,8 +65,15 @@ export function PlayApps() {
               <SwiperSlide key={app.id} className="cards">
                 <a href={app.excerpt}>
                   <div className="card">
-                    <div className="card-body">
+                    <div className="card-header">
                       <img src={game} alt="game" />
+                      <div className="border-btn">
+                        <Link to="/play" className="card-btn blue-btn">
+                          See All
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="card-body">
                       <h3 className="card-title">{app.title}</h3>
                       <p className="card-text">{app.meta_description}</p>
                       <div className="card-info">
