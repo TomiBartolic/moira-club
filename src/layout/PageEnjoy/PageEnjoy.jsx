@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { CategoryPills } from '../../components/CategoryPills/CategoryPills'
 import { categoriesEnjoy } from '../../categories'
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ='
+const ACCESS_TOKEN = 'blou1S2KSFYz9yANhzHmYbmbrq2NDidI4cKeucZoIEg='
 
 export function PageEnjoy() {
   const [enjoyApps, setEnjoyApps] = useState({ content: { videos: [] } })

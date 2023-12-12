@@ -5,7 +5,7 @@ import { categories } from '../../categories'
 import { useParams } from 'react-router-dom'
 
 const BASE_URL = 'https://cms-nocache-api.d1b.pw/'
-const ACCESS_TOKEN = 'b4Xh6xTDLJXju73Co0C7NwGC5v3CPliHMzn85ylw8GQ='
+const ACCESS_TOKEN = 'blou1S2KSFYz9yANhzHmYbmbrq2NDidI4cKeucZoIEg='
 
 export function PagePlay() {
   const [activeCategory, setActiveCategory] = useState(null)
