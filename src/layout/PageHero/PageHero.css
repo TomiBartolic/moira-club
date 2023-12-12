@@ -21,7 +21,10 @@
   height: 500px;
   position: relative;
 }
-
+.banner {
+  position: relative;
+  margin-bottom: 100px;
+}
 .vignette-border {
   position: fixed;
   top: 0;
@@ -90,6 +93,46 @@
 }
 .title h1 {
   margin-bottom: 20px;
+}
+.play-bg,
+.learn-bg,
+.enjoy-bg,
+.train-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 140px;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 10px;
+  color: var(--white);
+}
+.play-bg {
+  background-image: url('../../assets/blue.jpg');
+}
+
+.learn-bg {
+  background-image: url('../../assets/yellow.jpg');
+}
+.enjoy-bg {
+  background-image: url('../../assets/purple.jpg');
+}
+.train-bg {
+  background-image: url('../../assets/green.jpg');
+}
+
+.play-bg img,
+.learn-bg img,
+.enjoy-bg img,
+.train-bg img {
+  position: absolute;
+  top: -30px;
+  z-index: 2;
+  max-height: 110px;
 }
 @media only screen and (max-width: 768px) {
   .vignette-border {

@@ -4,11 +4,15 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import './PageHero.css'
 import 'swiper/css'
 import 'swiper/css/pagination'
-
+import { Link } from 'react-router-dom'
 import spiderman_logo from '../../assets/spiderman-logo.png'
 import avengers_logo from '../../assets/avengers-logo.png'
 import frozen_logo from '../../assets/frozen-logo.png'
 import youtube_logo from '../../assets/youtube-logo.png'
+import joystick from '../../assets/joystick.png'
+import book from '../../assets/book.png'
+import headphones from '../../assets/headphones.png'
+import weight from '../../assets/weight.png'
 import 'swiper/css'
 
 export function PageHero() {
@@ -45,37 +49,71 @@ export function PageHero() {
 
   return (
     <div className="hero">
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
-      >
-        {slide.map((slide) => {
-          return (
-            <SwiperSlide key={slide.id}>
-              <div className="slide-content">
-                <img
-                  className="brand-logo"
-                  key={slide.title}
-                  src={slide.image}
-                />
-                <h5>{slide.text}</h5>
-                <button type="button" className="btn-main">
-                  {slide.button_text}
-                </button>
-              </div>
-              <div className="vignette-border"></div>
-              <div className={slide.class}></div>
-            </SwiperSlide>
-          )
-        })}
-      </Swiper>
-      <div className="title">
-        <h1>Moira, unlimited content</h1>
-        <h4>The Latest Movies, TV Shows, Games, Music & More...</h4>
+      <div className="banner">
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+        >
+          {slide.map((slide) => {
+            return (
+              <SwiperSlide key={slide.id}>
+                <div className="slide-content">
+                  <img
+                    className="brand-logo"
+                    key={slide.title}
+                    src={slide.image}
+                  />
+                  <h5>{slide.text}</h5>
+                  <button type="button" className="btn-main">
+                    {slide.button_text}
+                  </button>
+                </div>
+                <div className="vignette-border"></div>
+                <div className={slide.class}></div>
+              </SwiperSlide>
+            )
+          })}
+        </Swiper>
+        <div className="title">
+          <h1>Moira, unlimited content</h1>
+          <h4>The Latest Movies, TV Shows, Games, Music & More...</h4>
+        </div>
+      </div>
+
+      <div class="container">
+        <div className="row">
+          <div className="col-3 offset-lg-2 col-lg-2">
+            <Link to="/play" className="play-bg">
+              <img src={joystick} alt="joystick" />
+              <h3>Play</h3>
+            </Link>
+          </div>
+
+          <div className="col-3 col-lg-2">
+            <Link to="/learn" className="learn-bg">
+              <img src={book} alt="book" />
+              <h3>Learn</h3>
+            </Link>
+          </div>
+
+          <div className="col-3 col-lg-2">
+            <Link to="/enjoy" className="enjoy-bg">
+              <img src={headphones} alt="headphones" />
+              <h3>Enjoy</h3>
+            </Link>
+          </div>
+
+          <div className="col-3 col-lg-2">
+            <Link to="/fitness" className="train-bg">
+              <img src={weight} alt="weight" />
+              <h3>Fitness</h3>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   )
